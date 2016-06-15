@@ -8,11 +8,11 @@ import org.springframework.data.solr.core.mapping.SolrDocument;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@SolrDocument(solrCoreName="restaurant")
+@SolrDocument(solrCoreName="restaurant")  // Solr collection name
 public class Restaurant {
 	
-	@Field("_id")
-	@Id
+	@Field("_id")                         // Specify field name in solr
+	@Id                                   // This is required
 	private String id;
 	
 	@Field("name")
